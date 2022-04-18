@@ -1,16 +1,27 @@
 <?php
 
-$db_host = "localhost"; 
-$db_user = "root"; 
-$db_password = null; 
-$db_name = "rally_task_db"; // name of the database
+include('ConnecttoDb\my_db.php'); 
 
+$name = $_POST['user_name'];
+$username = $_POST['user_username'];
+$password = $_POST['user_password'];
+$gender = $_POST['user_gender'];
+$birthday = $_POST['user_date_of_birth'];
+$phone = $_POST['user_phone_number']
+$points = 0;
+ 
+$query = $mysqli->prepare("SELECT user_id FROM users WHERE user_name = $name and user_phone_number = $phone;");
+$query->execute();
+$result = $query->get_result();
 
-$mysqli = new mysqli($db_host, $db_user, $db_password, $db_name); // Creating an object of type mysqli and this is how I am connecting to the database
+if(empty($result)){
 
-// Checking connection
-if(mysqli_connect_errno()){
-	die("Connection failed!");
+	$query = $mysqli->prepare("INSERT INTO users (user_name, user_username, user_password, user_gender, user_date_of_birth, user_phone_number, user_points) VALUES (?, ?, ?, ? , ?, ?)");
+	$query->bind_param("sssssii", $name , $username , $password , $gender, $birthday , $phone , $points);
+	$query->execute();
+}
+else{
+	echo "You already have an account!"
 }
 
 ?>
