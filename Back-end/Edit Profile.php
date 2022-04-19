@@ -20,4 +20,11 @@ $row = mysqli_fetch_row($account_result);
 $id = $row[0];
 
 
+$query = $mysqli->prepare("UPDATE users SET user_name = $new_name, user_username = $new_username, user_password = 
+$new_password, user_gender = $new_gender, user_date_of_birth = $new_birthday, user_phone_number = $new_phone WHERE user_id = $id;");
+$query->execute();
+
+echo "Updated successfully"
+
+
 ?>
