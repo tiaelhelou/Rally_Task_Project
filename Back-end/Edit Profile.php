@@ -10,7 +10,6 @@ $new_password = $_POST['user_password'];
 $new_gender = $_POST['user_gender'];
 $new_birthday = $_POST['user_date_of_birth'];
 $new_phone = $_POST['user_phone_number'];
-$interests = $_POST['interest_categorie']
 
 
 $query = $mysqli->prepare("SELECT user_id FROM users WHERE user_username = $username;");
