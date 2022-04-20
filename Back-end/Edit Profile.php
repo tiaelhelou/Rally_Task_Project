@@ -1,7 +1,7 @@
 <?php
 
 include('ConnecttoDb\my_db.php'); 
-include('Login')
+include('Login');
 
 
 $new_name = $_POST['user_name'];
@@ -24,7 +24,7 @@ $query = $mysqli->prepare("UPDATE users SET user_name = $new_name, user_username
 $new_password, user_gender = $new_gender, user_date_of_birth = $new_birthday, user_phone_number = $new_phone, user_interest_category = $interest WHERE user_id = $id;");
 $query->execute();
 
-echo "Updated successfully"
+echo "Updated successfully";
 
 
 ?>

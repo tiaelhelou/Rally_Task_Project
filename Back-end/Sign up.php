@@ -7,7 +7,7 @@ $username = $_POST['user_username'];
 $password = $_POST['user_password'];
 $gender = $_POST['user_gender'];
 $birthday = $_POST['user_date_of_birth'];
-$phone = $_POST['user_phone_number']
+$phone = $_POST['user_phone_number'];
 $points = 0;
  
 $query = $mysqli->prepare("SELECT user_id FROM users WHERE user_name = $name and user_phone_number = $phone;");

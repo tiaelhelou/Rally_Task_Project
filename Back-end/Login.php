@@ -11,7 +11,7 @@ $account_result = $query->get_result();
 
 if(empty($account_result)){
 	
-	echo "Incorrect username or/and password"
+	echo "Incorrect username or/and password";
 	
 }
 else{
