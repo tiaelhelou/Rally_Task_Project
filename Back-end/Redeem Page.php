@@ -17,14 +17,14 @@ $query = $mysqli->prepare("SELECT gift_name, gift_points FROM gifts ;");
 $query->execute();
 $gift_result = $query->get_result();
 
-$gifts = [];
+$gift = [];
 
 while($gifts = $gift_result->fetch_assoc()){
-    $gifts[] = $gifts;
+    $gift[] = $gifts;
 }
 
-$json_buy_sell = json_encode($buy_sell);
-echo $json_buy_sell;
+$json_giftl = json_encode($gift);
+echo $json_gift;
 
 
 ?>
