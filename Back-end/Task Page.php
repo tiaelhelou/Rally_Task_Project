@@ -3,7 +3,7 @@
 include('ConnecttoDb\my_db.php'); 
 
 
-$query = $mysqli->prepare("SELECT task_name FROM tasks WHERE task_status == 'open' ;);
+$query = $mysqli->prepare("SELECT task_name FROM tasks WHERE task_status == 'undergoing' ;);
 $query->execute();
 $task_result = $query->get_result();
 
