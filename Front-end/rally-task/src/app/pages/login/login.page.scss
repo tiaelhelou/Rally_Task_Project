@@ -82,26 +82,18 @@ ion-content {
       border-bottom-right-radius:23.957218170166016px;
   }
   
-  #logtext {
-    color:rgba(255, 255, 255, 1);
-      font-family:Rubik;
-    text-align: center;
-    position: absolute;
-    left: 25%;
-    right: 25%;
-    top: 75%;
-      font-size:21.56149673461914px;
-      letter-spacing:0;
-  }
+
   
   #logrec { 
-      box-shadow:-5.989304542541504px -5.989304542541504px 17.967914581298828px rgba(255, 255, 255, 0.5);
-      background-color:rgba(238.00000101327896, 54.54166531562805, 60.41234269738197, 1);
+      color:rgba(238.00000101327896, 54.54166531562805, 60.41234269738197, 1);
       width:270px;
       height: 50px;
     text-align: center;
     position: absolute;
+    font-size:21.56149673461914px;
+    letter-spacing:0;
     top: 73%;
+    left:1%;
       border-top-left-radius:23.957218170166016px;
       border-top-right-radius:23.957218170166016px;
       border-bottom-left-radius:23.957218170166016px;
