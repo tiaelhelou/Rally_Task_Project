@@ -1,286 +1,293 @@
-
 ion-content {
-    --background: var(--ion-color-medium); 
-  }
-  
-  ion-toolbar{
-    --background: var(--ion-color-medium);
-  }
-  
-  ion-title.title-large {
-    position: absolute;
-    top: 0;
-    left: 0;
-    text-align: center;
-  }
-  
-  
-  
-  #fullnamerec { 
-      background-color:rgba(255, 255, 255, 1);
-      width:250px;
-      height:45px;
-      border-top-left-radius:23.957218170166016px;
-      border-top-right-radius:23.957218170166016px;
-      border-bottom-left-radius:23.957218170166016px;
-      border-bottom-right-radius:23.957218170166016px;
-    text-align:center;
-    position:absolute;
-    top:20%;
-    left: 4%;
-  }
-  #fullname { 
-    color:rgb(32, 34, 35);
-    opacity:0.50;
-      font-family:Rubik;
-      text-align:center;
-    position:absolute;
-    left:25%;
-    right:25%;
-    top:20%;
-      font-size:21.56149673461914px;
-      letter-spacing:0;
-  }
-  #fullnamelogo {
-      color: grey;
-      text-align: center;
-      position: absolute;
-      left: 10%;
-      top: 22%;
-    }
-  
-  
-  
-  
-  
-  #usernamerec { 
-      background-color:rgba(255, 255, 255, 1);
-      width:250px;
-      height:45px;
-      border-top-left-radius:23.957218170166016px;
-      border-top-right-radius:23.957218170166016px;
-      border-bottom-left-radius:23.957218170166016px;
-      border-bottom-right-radius:23.957218170166016px;
-    text-align:center;
-    position:absolute;
-    top:29%;
-    left: 4%;
-  }
-  #username { 
-    color:rgb(32, 34, 35);
-    opacity:0.50;
-      font-family:Rubik;
-    text-align: center;
-    position: absolute;
-    left: 25%;
-    right: 25%;
-    top: 29%;
-      font-size:21.56149673461914px;
-      letter-spacing:0;
-  }
-  #usernamelogo {
-      color: grey;
-      text-align: center;
-      position: absolute;
-      left: 10%;
-      top: 32%;
-    }
-  
-  
-  
-  
-    #passwordrec {
-      background-color:rgba(255, 255, 255, 1);
-      width:250px;
-      height:45px;
-      text-align: center;
-      position: absolute;
-      top: 38%;
-      left: 4%;
-      border-top-left-radius:23.957218170166016px;
-      border-top-right-radius:23.957218170166016px;
-      border-bottom-left-radius:23.957218170166016px;
-      border-bottom-right-radius:23.957218170166016px;
-  }
-  #password { 
-    color:rgb(32, 34, 35);
-    opacity:0.50;
-    font-family:Rubik;
-    text-align: center;
-    position: absolute;
-    left: 25%;
-    right: 25%;
-    top: 38%;
-    font-size:21.56149673461914px;
-      letter-spacing:0;
-  }
-  
-  #passwordlogo {
-      color: grey;
-      text-align: center;
-      position: absolute;
-      left: 10%;
-      top: 41%;
-    }
-  
-  
-  
-    #birthdayrec {
-      background-color:rgba(255, 255, 255, 1);
-      width:250px;
-      height:45px;
-      text-align: center;
-      position: absolute;
-      top: 47%;
-      left: 4%;
-      border-top-left-radius:23.957218170166016px;
-      border-top-right-radius:23.957218170166016px;
-      border-bottom-left-radius:23.957218170166016px;
-      border-bottom-right-radius:23.957218170166016px;
-  }
-  
-    #birthday { 
-      color:rgb(32, 34, 35);
-    opacity:0.50;
-    font-family:Rubik;
-    text-align: center;
-    position: absolute;
-    left: 25%;
-    right: 25%;
-    top: 47%;
-    font-size:18px;
-      letter-spacing:0;
-  }
-  
-  #genderrec {
-      background-color:rgba(255, 255, 255, 1);
-      width:250px;
-      height:45px;
-      text-align: center;
-      position: absolute;
-      top: 56%;
-      left: 4%;
-      border-top-left-radius:23.957218170166016px;
-      border-top-right-radius:23.957218170166016px;
-      border-bottom-left-radius:23.957218170166016px;
-      border-bottom-right-radius:23.957218170166016px;
-  }
-  #gender { 
-    color:rgb(32, 34, 35);
-    opacity:0.50;
-    font-family:Rubik;
-    text-align: center;
-    position: absolute;
-    left: 25%;
-    right: 25%;
-    top: 56%;
-    font-size:18px;
-      letter-spacing:0;
-  }
-  
-  
-  
-  
-  
-  
-  #phonenumberrec { 
-      background-color:rgba(255, 255, 255, 1);
-      width:250px;
-      height:45px;
-      border-top-left-radius:23.957218170166016px;
-      border-top-right-radius:23.957218170166016px;
-      border-bottom-left-radius:23.957218170166016px;
-      border-bottom-right-radius:23.957218170166016px;
-    text-align:center;
-    position:absolute;
-    top:65%;
-    left: 4%;
-  }
-  #phonenumber { 
-    color:rgb(32, 34, 35);
-    opacity:0.50;
-      font-family:Rubik;
-      text-align:center;
-    position:absolute;
-    left:25%;
-    right:25%;
-    top:65%;
-      font-size:19px;
-      letter-spacing:0;
-  }
-  
-  
-  
-  #interestrec { 
-      background-color:rgba(255, 255, 255, 1);
-      width:250px;
-      height:45px;
-      border-top-left-radius:23.957218170166016px;
-      border-top-right-radius:23.957218170166016px;
-      border-bottom-left-radius:23.957218170166016px;
-      border-bottom-right-radius:23.957218170166016px;
-    text-align:center;
-    position:absolute;
-    top:74%;
-    left: 4%;
-  }
-  #interest { 
-    color:rgb(32, 34, 35);
-    opacity:0.50;
-      font-family:Rubik;
-      text-align:center;
-    position:absolute;
-    left:25%;
-    right:25%;
-    top:74%;
-      font-size:19px;
-      letter-spacing:0;
-  }
-  
-  #cancelbtn {
-      color:rgba(255, 255, 255, 1);
-      font-family:Rubik;
-      text-align: left;
-      position: absolute;
-      left: 7%;
-      top: 83%;
-      font-size:22px;
-      letter-spacing:0;
-      border-top-left-radius:23.957218170166016px;
-      border-top-right-radius:23.957218170166016px;
-      border-bottom-left-radius:23.957218170166016px;
-      border-bottom-right-radius:23.957218170166016px;
-    }
-  
-  
-    #savebtn {
-      color:rgba(255, 255, 255, 1);
-      font-family:Rubik;
-      text-align: right;
-      position: absolute;
-      left: 70%;
-      top: 83%;
-      font-size:22px;
-      letter-spacing:0;
-      border-top-left-radius:23.957218170166016px;
-      border-top-right-radius:23.957218170166016px;
-      border-bottom-left-radius:23.957218170166016px;
-      border-bottom-right-radius:23.957218170166016px;
-    }
+  --background: var(--ion-color-medium);
+}
 
-    
-    #logoutbtn {
-      color:rgba(255, 255, 255, 1);
-      font-family:Rubik;
-      text-align: center;
-      position: absolute;
-      width:80%;
-      left:10%;
-      top: 90%;
-      font-size:22px;
-      letter-spacing:0;
-      border-top-left-radius:23.957218170166016px;
-      border-top-right-radius:23.957218170166016px;
-      border-bottom-left-radius:23.957218170166016px;
-      border-bottom-right-radius:23.957218170166016px;
-    }
+ion-toolbar {
+  --background: var(--ion-color-medium);
+}
+
+ion-title.title-large {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+}
+
+
+
+#fullnamerec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 45px;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 4%;
+}
+
+#fullname {
+  color: rgb(32, 34, 35);
+  opacity: 0.50;
+  font-family: Rubik;
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 20%;
+  font-size: 21.56149673461914px;
+  letter-spacing: 0;
+}
+
+#fullnamelogo {
+  color: grey;
+  text-align: center;
+  position: absolute;
+  left: 10%;
+  top: 22%;
+}
+
+
+
+
+
+#usernamerec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 45px;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+  text-align: center;
+  position: absolute;
+  top: 29%;
+  left: 4%;
+}
+
+#username {
+  color: rgb(32, 34, 35);
+  opacity: 0.50;
+  font-family: Rubik;
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 29%;
+  font-size: 21.56149673461914px;
+  letter-spacing: 0;
+}
+
+#usernamelogo {
+  color: grey;
+  text-align: center;
+  position: absolute;
+  left: 10%;
+  top: 32%;
+}
+
+
+
+
+#passwordrec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 45px;
+  text-align: center;
+  position: absolute;
+  top: 38%;
+  left: 4%;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+}
+
+#password {
+  color: rgb(32, 34, 35);
+  opacity: 0.50;
+  font-family: Rubik;
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 38%;
+  font-size: 21.56149673461914px;
+  letter-spacing: 0;
+}
+
+#passwordlogo {
+  color: grey;
+  text-align: center;
+  position: absolute;
+  left: 10%;
+  top: 41%;
+}
+
+
+
+#birthdayrec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 45px;
+  text-align: center;
+  position: absolute;
+  top: 47%;
+  left: 4%;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+}
+
+#birthday {
+  color: rgb(32, 34, 35);
+  opacity: 0.50;
+  font-family: Rubik;
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 47%;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+#genderrec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 45px;
+  text-align: center;
+  position: absolute;
+  top: 56%;
+  left: 4%;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+}
+
+#gender {
+  color: rgb(32, 34, 35);
+  opacity: 0.50;
+  font-family: Rubik;
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 56%;
+  font-size: 18px;
+  letter-spacing: 0;
+}
+
+
+
+
+
+
+#phonenumberrec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 45px;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+  text-align: center;
+  position: absolute;
+  top: 65%;
+  left: 4%;
+}
+
+#phonenumber {
+  color: rgb(32, 34, 35);
+  opacity: 0.50;
+  font-family: Rubik;
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 65%;
+  font-size: 19px;
+  letter-spacing: 0;
+}
+
+
+
+#interestrec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 45px;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+  text-align: center;
+  position: absolute;
+  top: 74%;
+  left: 4%;
+}
+
+#interest {
+  color: rgb(32, 34, 35);
+  opacity: 0.50;
+  font-family: Rubik;
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 74%;
+  font-size: 19px;
+  letter-spacing: 0;
+}
+
+#cancelbtn {
+  color: rgba(255, 255, 255, 1);
+  font-family: Rubik;
+  text-align: left;
+  position: absolute;
+  left: 7%;
+  top: 83%;
+  font-size: 22px;
+  letter-spacing: 0;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+}
+
+
+#savebtn {
+  color: rgba(255, 255, 255, 1);
+  font-family: Rubik;
+  text-align: right;
+  position: absolute;
+  left: 70%;
+  top: 83%;
+  font-size: 22px;
+  letter-spacing: 0;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+}
+
+
+#logoutbtn {
+  color: rgba(255, 255, 255, 1);
+  font-family: Rubik;
+  text-align: center;
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  top: 90%;
+  font-size: 22px;
+  letter-spacing: 0;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+}
