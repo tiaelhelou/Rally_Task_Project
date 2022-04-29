@@ -1,27 +1,309 @@
-#container {
-  text-align: center;
+ion-content {
+  --background: var(--ion-color-medium);
+}
 
+ion-toolbar {
+  --background: var(--ion-color-medium);
+}
+
+ion-title.title-large {
   position: absolute;
+  top: 0;
   left: 0;
-  right: 0;
+  text-align: center;
+}
+
+
+#aboutrec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 100px;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  left: 4%;
+}
+
+#about {
+  opacity: 1;
+  font-family: Rubik;
+  width: 200px;
+  text-align: start;
+  position: absolute;
+  left: 10%;
+  right: 25%;
+  top: 20%;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+#recommendedtext {
+  opacity: 1;
+  font-family: Rubik;
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 41%;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+#task1rec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 30px;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 4%;
+}
+
+#task1text {
+  opacity: 1;
+  font-family: Rubik;
+  text-align: start;
+  position: absolute;
+  width: 200px;
+  left: 10%;
+  right: 25%;
+  top: 44%;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+#task2rec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 30px;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+  text-align: center;
+  position: absolute;
+  top: 51%;
+  left: 4%;
+}
+
+#task2text {
+  opacity: 1;
+  font-family: Rubik;
+  text-align: start;
+  position: absolute;
+  width: 200px;
+  left: 10%;
+  right: 25%;
   top: 50%;
-  transform: translateY(-50%);
+  font-size: 15px;
+  letter-spacing: 0;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+#task3rec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 30px;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+  text-align: center;
+  position: absolute;
+  top: 57%;
+  left: 4%;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+#task3text {
+  opacity: 1;
+  font-family: Rubik;
+  text-align: start;
+  position: absolute;
+  width: 200px;
+  left: 10%;
+  right: 25%;
+  top: 56%;
+  font-size: 15px;
+  letter-spacing: 0;
 }
 
-#container a {
-  text-decoration: none;
+#leadertext {
+
+  opacity: 1;
+  font-family: Rubik;
+  text-align: center;
+  position: absolute;
+  left: 25%;
+  right: 25%;
+  top: 64%;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+#leaderboardrec {
+  background-color: rgba(255, 255, 255, 1);
+  width: 250px;
+  height: 100px;
+  border-top-left-radius: 23.957218170166016px;
+  border-top-right-radius: 23.957218170166016px;
+  border-bottom-left-radius: 23.957218170166016px;
+  border-bottom-right-radius: 23.957218170166016px;
+  text-align: center;
+  position: absolute;
+  top: 68%;
+  left: 4%;
+}
+
+#leader1logo {
+  color: grey;
+  text-align: center;
+  position: absolute;
+  left: 10%;
+  top: 70%;
+}
+
+#leader1text {
+  opacity: 1;
+  font-family: Rubik;
+  text-align: start;
+  position: absolute;
+  width: 100px;
+  left: 20%;
+  right: 25%;
+  top: 68%;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+#point1text {
+  opacity: 1;
+  font-family: Rubik;
+  text-align: start;
+  position: absolute;
+  width: 100px;
+  left: 60%;
+  right: 25%;
+  top: 68%;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+#leader2logo {
+  color: grey;
+  text-align: center;
+  position: absolute;
+  left: 10%;
+  top: 75%;
+}
+
+#leader2text {
+  opacity: 1;
+  font-family: Rubik;
+  text-align: start;
+  position: absolute;
+  width: 100px;
+  left: 20%;
+  right: 25%;
+  top: 73%;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+#point2text {
+  opacity: 1;
+  font-family: Rubik;
+  text-align: start;
+  position: absolute;
+  width: 100px;
+  left: 60%;
+  right: 25%;
+  top: 73%;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+#leader3logo {
+  color: grey;
+  text-align: center;
+  position: absolute;
+  left: 10%;
+  top: 80%;
+}
+
+#leader3text {
+  opacity: 1;
+  font-family: Rubik;
+  text-align: start;
+  position: absolute;
+  width: 100px;
+  left: 20%;
+  right: 25%;
+  top: 78%;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+#point3text {
+  opacity: 1;
+  font-family: Rubik;
+  text-align: start;
+  position: absolute;
+  width: 100px;
+  left: 60%;
+  right: 25%;
+  top: 78%;
+  font-size: 15px;
+  letter-spacing: 0;
+}
+
+#homelogo {
+  font-size: x-large;
+  color: grey;
+  text-align: center;
+  position: absolute;
+  left: 7%;
+  top: 86%;
+}
+
+#tasklogo {
+  font-size: x-large;
+  color: grey;
+  text-align: center;
+  position: absolute;
+  left: 24%;
+  top: 86%;
+}
+
+#giftlogo {
+  font-size: x-large;
+  color: grey;
+  text-align: center;
+  position: absolute;
+  left: 41%;
+  top: 86%;
+}
+
+#leaderlogo {
+  font-size: x-large;
+  color: grey;
+  text-align: center;
+  position: absolute;
+  left: 58%;
+  top: 86%;
+}
+
+#profilelogo {
+  font-size: x-large;
+  color: grey;
+  text-align: center;
+  position: absolute;
+  left: 75%;
+  top: 86%;
 }
