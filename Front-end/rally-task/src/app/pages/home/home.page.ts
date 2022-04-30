@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 export class HomePage {
 
   constructor(private router: Router) {}
+  
+  ngOnInit() {
+  }
 
   goToTAsk(){
     this.router.navigate(['/task']);
