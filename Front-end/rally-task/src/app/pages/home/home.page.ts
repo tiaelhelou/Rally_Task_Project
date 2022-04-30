@@ -21,4 +21,9 @@ export class HomePage {
   goToRedeem(){
     this.router.navigate(['/redeem']);
   }
+
+  goToLeadboard() {
+    this.router.navigate(['/leadboard']);
+  }
+  
 }

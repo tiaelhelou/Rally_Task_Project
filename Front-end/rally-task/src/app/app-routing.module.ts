@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'redeem',
     loadChildren: () => import('./pages/redeem/redeem.module').then( m => m.RedeemPageModule)
   },
+  {
+    path: 'leadboard',
+    loadChildren: () => import('./pages/leadboard/leadboard.module').then( m => m.LeadboardPageModule)
+  },
 ];
 
 @NgModule({
