@@ -14,4 +14,7 @@ export class HomePage {
     this.router.navigate(['/task']);
   }
 
+  goToUser(){
+    this.router.navigate(['/userprofile']);
+  }
 }
