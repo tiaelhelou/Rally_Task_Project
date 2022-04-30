@@ -17,4 +17,8 @@ export class HomePage {
   goToUser(){
     this.router.navigate(['/userprofile']);
   }
+
+  goToRedeem(){
+    this.router.navigate(['/redeem']);
+  }
 }

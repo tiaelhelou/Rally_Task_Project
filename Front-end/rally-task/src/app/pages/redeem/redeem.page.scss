@@ -1,0 +1,166 @@
+ion-content {
+    --background: var(--ion-color-medium);
+}
+
+ion-toolbar {
+    --background: var(--ion-color-medium);
+}
+
+ion-title.title-large {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 30px;
+    text-align: center;
+}
+
+#pointstext {
+    opacity: 1;
+    font-family: Rubik;
+    text-align: left;
+    position: absolute;
+    left: 10%;
+    top: 27%;
+    font-size: 30px;
+    letter-spacing: 0;
+}
+
+#pointsrec {
+    background-color: rgba(255, 255, 255, 1);
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    border-top-left-radius: 23.957218170166016px;
+    border-top-right-radius: 23.957218170166016px;
+    border-bottom-left-radius: 23.957218170166016px;
+    border-bottom-right-radius: 23.957218170166016px;
+}
+
+#giftstext {
+    opacity: 1;
+    font-family: Rubik;
+    text-align: left;
+    position: absolute;
+    left: 10%;
+    top: 45%;
+    font-size: 30px;
+    letter-spacing: 0;
+}
+
+#gift1rec {
+    background-color: rgba(255, 255, 255, 1);
+    width: 250px;
+    height: 45px;
+    text-align: center;
+    position: absolute;
+    top: 51%;
+    left: 5%;
+    border-top-left-radius: 23.957218170166016px;
+    border-top-right-radius: 23.957218170166016px;
+    border-bottom-left-radius: 23.957218170166016px;
+    border-bottom-right-radius: 23.957218170166016px;
+
+}
+
+#gift1logo {
+    font-size: x-large;
+    color: grey;
+    text-align: right;
+    position: absolute;
+    right: 5%;
+    top: 51%;
+}
+
+#gift2rec {
+    background-color: rgba(255, 255, 255, 1);
+    width: 250px;
+    height: 45px;
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    border-top-left-radius: 23.957218170166016px;
+    border-top-right-radius: 23.957218170166016px;
+    border-bottom-left-radius: 23.957218170166016px;
+    border-bottom-right-radius: 23.957218170166016px;
+}
+
+#gift2logo {
+    font-size: x-large;
+    color: grey;
+    text-align: right;
+    position: absolute;
+    right: 5%;
+    top: 60%;
+}
+
+#gift3rec {
+    background-color: rgba(255, 255, 255, 1);
+    width: 250px;
+    height: 45px;
+    text-align: center;
+    position: absolute;
+    top: 69%;
+    left: 5%;
+    border-top-left-radius: 23.957218170166016px;
+    border-top-right-radius: 23.957218170166016px;
+    border-bottom-left-radius: 23.957218170166016px;
+    border-bottom-right-radius: 23.957218170166016px;
+}
+
+#gift3logo {
+    font-size: x-large;
+    color: grey;
+    text-align: right;
+    position: absolute;
+    right: 5%;
+    top: 69%;
+}
+
+#homelogo {
+    font-size: x-large;
+    color: grey;
+    text-align: center;
+    position: absolute;
+    left: 7%;
+    top: 86%;
+}
+
+#tasklogo {
+    font-size: x-large;
+    color: grey;
+    text-align: center;
+    position: absolute;
+    left: 24%;
+    top: 86%;
+}
+
+#giftlogo {
+    font-size: x-large;
+    color: grey;
+    text-align: center;
+    position: absolute;
+    left: 41%;
+    top: 86%;
+}
+
+#leaderlogo {
+    font-size: x-large;
+    color: grey;
+    text-align: center;
+    position: absolute;
+    left: 58%;
+    top: 86%;
+}
+
+#profilelogo {
+    font-size: x-large;
+    color: grey;
+    text-align: center;
+    position: absolute;
+    left: 75%;
+    top: 86%;
+}

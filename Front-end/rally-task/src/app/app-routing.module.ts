@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'userprofile',
     loadChildren: () => import('./pages/userprofile/userprofile.module').then( m => m.UserprofilePageModule)
   },
+  {
+    path: 'redeem',
+    loadChildren: () => import('./pages/redeem/redeem.module').then( m => m.RedeemPageModule)
+  },
 ];
 
 @NgModule({
