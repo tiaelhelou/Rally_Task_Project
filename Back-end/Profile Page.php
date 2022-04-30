@@ -1,8 +1,9 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+
 include('ConnecttoDb\my_db.php'); 
 include('Login');
-
 
 $query = $mysqli->prepare("SELECT task_name FROM tasks WHERE task_status == 'completed' and users_user_id = $id;);
 $query->execute();

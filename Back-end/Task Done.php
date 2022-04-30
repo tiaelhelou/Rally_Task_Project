@@ -1,9 +1,13 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+
 include('ConnecttoDb\my_db.php'); 
 include('Login');
 
-$name = $_GET["task_name"];
+$data = json_decode(file_get_contents("php://input"));
+
+$name = $data->task_name;
 
 $query = $mysqli->prepare("SELECT task_id FROM tasks WHERE task_name = $name;");
 $query->execute();

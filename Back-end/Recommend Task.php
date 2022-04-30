@@ -1,5 +1,7 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+
 include('ConnecttoDb\my_db.php'); 
 include('Login'); 
 

@@ -1,9 +1,13 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+
 include('ConnecttoDb\my_db.php'); 
 include('Login');
 
-$name = $_GET["gift_name"];
+$data = json_decode(file_get_contents("php://input"));
+
+$name = $data->gift_name;
 
 $query = $mysqli->prepare("SELECT gift_points FROM gifts WHERE gift_name = $name;");
 $query->execute();

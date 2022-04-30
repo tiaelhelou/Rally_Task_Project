@@ -1,9 +1,13 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+
 include('ConnecttoDb\my_db.php'); 
 
-$username = $_POST['user_username'];
-$password = $_POST['user_password'];
+$data = json_decode(file_get_contents("php://input"));
+
+$username = $data->user_username;
+$password = $data->user_password;
 
 $query = $mysqli->prepare("SELECT user_id FROM users WHERE user_username = $username and user_password = $password;");
 $query->execute();

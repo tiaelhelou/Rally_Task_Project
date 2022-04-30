@@ -1,8 +1,9 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+
 include('ConnecttoDb\my_db.php'); 
 include('Login');
-
 
 $query = $mysqli->prepare("SELECT user_points FROM users WHERE user_id = $id;");
 $query->execute();

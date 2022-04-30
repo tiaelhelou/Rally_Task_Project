@@ -1,7 +1,8 @@
 <?php
 
-include('ConnecttoDb\my_db.php'); 
+header('Access-Control-Allow-Origin: *');
 
+include('ConnecttoDb\my_db.php'); 
 
 $query = $mysqli->prepare("SELECT user_name, user_points FROM users ORDER BY user_points DESC ;);
 $query->execute();

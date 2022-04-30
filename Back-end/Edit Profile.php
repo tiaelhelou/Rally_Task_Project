@@ -1,16 +1,19 @@
 <?php
 
+header('Access-Control-Allow-Origin: *');
+
 include('ConnecttoDb\my_db.php'); 
 include('Login');
 
+$data = json_decode(file_get_contents("php://input"));
 
-$new_name = $_POST['user_name'];
-$new_username = $_POST['user_username'];
-$new_password = $_POST['user_password'];
-$new_gender = $_POST['user_gender'];
-$new_birthday = $_POST['user_date_of_birth'];
-$new_phone = $_POST['user_phone_number'];
-$interest = $_POST['user_interest_category'];
+$new_name = $data->user_name;
+$new_username = $data->user_username;
+$new_password = $data->user_password;
+$new_gender = $data->user_gender;
+$new_birthday = $data->user_date_of_birth;
+$new_phone = $data->user_phone_number;
+$interest = $data->user_interest_category;
 
 
 $query = $mysqli->prepare("UPDATE users SET user_name = $new_name, user_username = $new_username, user_password = 
