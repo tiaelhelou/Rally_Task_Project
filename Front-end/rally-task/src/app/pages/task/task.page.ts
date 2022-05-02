@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DisplayTaskService, Task } from '../../services/displaytasks/displaytask.service';
 
 @Component({
   selector: 'app-task',
@@ -8,9 +9,12 @@ import { Router } from '@angular/router';
 })
 export class TaskPage implements OnInit {
 
-  constructor(private router: Router) { }
+  tasks: Task[];
+
+  constructor(private router: Router, private service: DisplayTaskService) { }
 
   ngOnInit() {
+    this.service.getTask().subscribe( response => {this.tasks = response;} );
   }
 
   goToHome(){
@@ -28,4 +32,7 @@ export class TaskPage implements OnInit {
   goToLeadboard() {
     this.router.navigate(['/leadboard']);
   }
+
+
+
 }

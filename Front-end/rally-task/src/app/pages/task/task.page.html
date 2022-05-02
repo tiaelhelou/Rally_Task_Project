@@ -13,162 +13,21 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id=task0rec></div>
-
-  <div id=tasknb0>
-    <ion-icon size="large" color="dark" name="radio-button-off-outline"></ion-icon>
-  </div>
-
-  <div id=nb0text>
-    <ion-text color="dark">
-      1
-    </ion-text>
-  </div>
-
-  <div id=ok0logo>
-    <ion-button size="small" color="light">
-      <ion-icon name="checkmark-circle-outline"></ion-icon>
-    </ion-button>
-  </div>
-
-  <div id=task1rec></div>
-
-  <div id=tasknb1>
-    <ion-icon size="large" color="dark" name="radio-button-off-outline"></ion-icon>
-  </div>
-
-
-  <div id=nb1text>
-    <ion-text color="dark">
-      2
-    </ion-text>
-  </div>
-
-  <div id=ok1logo>
-    <ion-button size="small" color="light">
-      <ion-icon name="checkmark-circle-outline"></ion-icon>
-    </ion-button>
-  </div>
-
-  <div id=task2rec></div>
-
-  <div id=tasknb2>
-    <ion-icon size="large" color="dark" name="radio-button-off-outline"></ion-icon>
-  </div>
-
-  <div id=nb2text>
-    <ion-text color="dark">
-      3
-    </ion-text>
-  </div>
-
-  <div id=ok2logo>
-    <ion-button size="small" color="light">
-      <ion-icon name="checkmark-circle-outline"></ion-icon>
-    </ion-button>
-  </div>
-
-  <div id=task3rec></div>
-
-  <div id=tasknb3>
-    <ion-icon size="large" color="dark" name="radio-button-off-outline"></ion-icon>
-  </div>
-
-  <div id=nb3text>
-    <ion-text color="dark">
-      4
-    </ion-text>
-  </div>
-
-  <div id=ok3logo>
-    <ion-button size="small" color="light">
-      <ion-icon name="checkmark-circle-outline"></ion-icon>
-    </ion-button>
-  </div>
-
-
-  <div id=task4rec></div>
-
-  <div id=tasknb4>
-    <ion-icon size="large" color="dark" name="radio-button-off-outline"></ion-icon>
-  </div>
-
-  <div id=nb4text>
-    <ion-text color="dark">
-      5
-    </ion-text>
-  </div>
-
-  <div id=ok4logo>
-    <ion-button size="small" color="light">
-      <ion-icon name="checkmark-circle-outline"></ion-icon>
-    </ion-button>
-  </div>
-
-
-  <div id=task5rec></div>
-
-  <div id=tasknb5>
-    <ion-icon size="large" color="dark" name="radio-button-off-outline"></ion-icon>
-  </div>
-
-  <div id=nb5text>
-    <ion-text color="dark">
-      6
-    </ion-text>
-  </div>
-
-  <div id=ok5logo>
-    <ion-button size="small" color="light">
-      <ion-icon name="checkmark-circle-outline"></ion-icon>
-    </ion-button>
-  </div>
-
-  <div id=task6rec></div>
-
-  <div id=tasknb6>
-    <ion-icon size="large" color="dark" name="radio-button-off-outline"></ion-icon>
-  </div>
-
-  <div id=nb6text>
-    <ion-text color="dark">
-      7
-    </ion-text>
-  </div>
-  <div id=ok6logo>
-    <ion-button size="small" color="light">
-      <ion-icon name="checkmark-circle-outline"></ion-icon>
-    </ion-button>
-  </div>
-
-  <div id=homelogo>
-    <ion-button size="small" color="dark" (click)="goToHome()">
-      <ion-icon name="home-outline"></ion-icon>
-    </ion-button>
-  </div>
-
-  <div id=tasklogo>
-    <ion-button size="small" >
-      <ion-icon name="reader-outline"></ion-icon>
-    </ion-button>
-  </div>
-
-  <div id=giftlogo>
-    <ion-button size="small" color="dark" (click)="goToRedeem()">
-      <ion-icon name="gift-outline"></ion-icon>
-    </ion-button>
-  </div>
-
-  <div id=leaderlogo>
-    <ion-button size="small" color="dark" (click)="goToLeadboard()">
-      <ion-icon name="bar-chart-outline"></ion-icon>
-    </ion-button>
-  </div>
-
-  <div id=profilelogo>
-    <ion-button size="small" color="dark" (click)="goToUser()">
-      <ion-icon name="person-circle-outline"></ion-icon>
-    </ion-button>
+  <div>
+    <ion-card id=task0rec>
+      <ion-card-header>
+        <ion-card-subtitle>Cleanup Beach  10pts</ion-card-subtitle>
+      </ion-card-header>
+      <div id=ok0logo>
+        <ion-button size="small" color="light">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </ion-card>
   </div>
 
 </ion-content>
+
+<!--
+  *ngFor="let task of tasks"
+  {{task.task_name}} {{task.task_point}} -->

@@ -18,10 +18,10 @@ ion-title.title-large {
     background-color: rgba(255, 255, 255, 1);
     width: 250px;
     height: 45px;
-    text-align: center;
+    text-align: left;
     position: absolute;
     top: 24%;
-    left: 4%;
+    left: 0%;
     border-top-left-radius: 23.957218170166016px;
     border-top-right-radius: 23.957218170166016px;
     border-bottom-left-radius: 23.957218170166016px;
@@ -53,8 +53,8 @@ ion-title.title-large {
     color: grey;
     text-align: right;
     position: absolute;
-    right: 10%;
-    top: 24%;
+    right: 4%;
+    top: 19%;
 }
 
 #task1rec {
