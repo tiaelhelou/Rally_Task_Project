@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CompletedTask, UndergoingTask, Username, UserprofileService } from '../../services/usersprofile/userprofile.service';
 
 @Component({
   selector: 'app-userprofile',
@@ -8,9 +9,16 @@ import { Router } from '@angular/router';
 })
 export class UserprofilePage implements OnInit {
 
-  constructor(private router: Router) { }
+  ctasks: CompletedTask[];
+  utasks: UndergoingTask[];
+  usernames: Username[];
+
+  constructor(private router: Router, private service: UserprofileService) { }
 
   ngOnInit() {
+    this.service.getCompletedTask().subscribe ( response => {this.ctasks = response;} )
+    this.service.getUndergoingTask().subscribe ( response => {this.utasks = response;} )
+    this.service.getUsername().subscribe ( response => {this.usernames = response;} )
   }
 
   goToTAsk(){

@@ -13,9 +13,13 @@
     </ion-toolbar>
   </ion-header>
 
+
+
   <div id=editprofilebtn>
     <ion-button size="small" color="light" (click)="goToeditProfile()"> Edit profile </ion-button>
   </div>
+
+
 
   <div id=completedtext>
     <ion-text color="dark">
@@ -23,11 +27,18 @@
     </ion-text>
   </div>
 
-  <div id=task1rec></div>
 
-  <div id=task2rec></div>
 
-  <div id=task3rec></div>
+<div class="completedtask">
+  <ion-card   color = dark *ngFor="let ctask of ctasks">
+    <ion-card-header>
+      <ion-card-subtitle>{{ctask.task_name}}</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+</div>
+
+  
+
 
   <div id=undertasktext>
     <ion-text color="dark">
@@ -35,11 +46,16 @@
     </ion-text>
   </div>
 
-  <div id=undertask1rec></div>
 
-  <div id=undertask2rec></div>
 
-  <div id=undertask3rec></div>
+  <div class="undergoingtask">
+    <ion-card   color = dark *ngFor="let utask of utasks">
+      <ion-card-header>
+        <ion-card-subtitle>{{utask.task_name}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
 
   <div id=homelogo>
     <ion-button size="small" color="dark" (click)="goToHome()">
@@ -69,6 +85,7 @@
     <ion-button size="small">
       <ion-icon name="person-circle-outline"></ion-icon>
     </ion-button>
-  </div>
+  </div>     
+
 
 </ion-content>
