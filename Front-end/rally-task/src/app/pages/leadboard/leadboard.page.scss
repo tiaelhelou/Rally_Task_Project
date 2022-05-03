@@ -20,8 +20,8 @@ ion-title.title-large {
     height: 45px;
     text-align: center;
     position: absolute;
-    top: 22%;
-    left: 4%;
+    top: 18%;
+    left: -2%;
     border-top-left-radius: 23.957218170166016px;
     border-top-right-radius: 23.957218170166016px;
     border-bottom-left-radius: 23.957218170166016px;
@@ -30,22 +30,11 @@ ion-title.title-large {
 
 #user1 {
     font-size: x-large;
-    color: grey;
+    color: rgb(20, 20, 20);
     text-align: center;
     position: absolute;
     left: 4%;
     top: 23%;
-}
-
-#user1text {
-    opacity: 1;
-    font-family: Rubik;
-    text-align: center;
-    position: absolute;
-    left: 13%;
-    top: 37mm;
-    font-size: 20px;
-    letter-spacing: 0;
 }
 
 #user2rec {
@@ -64,22 +53,11 @@ ion-title.title-large {
 
 #user2 {
     font-size: x-large;
-    color: grey;
+    color: rgb(20, 20, 20);
     text-align: center;
     position: absolute;
     left: 4%;
     top: 31%;
-}
-
-#user2text {
-    opacity: 1;
-    font-family: Rubik;
-    text-align: center;
-    position: absolute;
-    left: 13%;
-    top: 49mm;
-    font-size: 20px;
-    letter-spacing: 0;
 }
 
 #user3rec {
@@ -98,22 +76,11 @@ ion-title.title-large {
 
 #user3 {
     font-size: x-large;
-    color: grey;
+    color: rgb(20, 20, 20);
     text-align: center;
     position: absolute;
     left: 4%;
     top: 39%;
-}
-
-#user3text {
-    opacity: 1;
-    font-family: Rubik;
-    text-align: center;
-    position: absolute;
-    left: 13%;
-    top: 61mm;
-    font-size: 20px;
-    letter-spacing: 0;
 }
 
 #user4rec {
@@ -131,6 +98,7 @@ ion-title.title-large {
 }
 
 #user4text {
+    color: rgb(20, 20, 20);
     opacity: 1;
     font-family: Rubik;
     text-align: center;
@@ -156,6 +124,7 @@ ion-title.title-large {
 }
 
 #user5text {
+    color: rgb(20, 20, 20);
     opacity: 1;
     font-family: Rubik;
     text-align: center;
@@ -181,6 +150,7 @@ ion-title.title-large {
 }
 
 #user6text {
+    color: rgb(20, 20, 20);
     opacity: 1;
     font-family: Rubik;
     text-align: center;
@@ -206,6 +176,7 @@ ion-title.title-large {
 }
 
 #user7text {
+    color: rgb(20, 20, 20);
     opacity: 1;
     font-family: Rubik;
     text-align: center;
@@ -231,6 +202,7 @@ ion-title.title-large {
 }
 
 #user8text {
+    color: rgb(20, 20, 20);
     opacity: 1;
     font-family: Rubik;
     text-align: center;
