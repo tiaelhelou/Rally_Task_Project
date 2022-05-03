@@ -32,7 +32,4 @@ export class TaskPage implements OnInit {
   goToLeadboard() {
     this.router.navigate(['/leadboard']);
   }
-
-
-
 }

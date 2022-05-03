@@ -14,16 +14,46 @@
   </ion-header>
 
   <div>
-    <ion-card id=task0rec>
+    <ion-card id=task>
       <ion-card-header>
-        <ion-card-subtitle>Cleanup Beach  10pts</ion-card-subtitle>
+        <ion-card-subtitle>Cleanup Beach 10pts</ion-card-subtitle>
       </ion-card-header>
-      <div id=ok0logo>
+      <div id=button>
         <ion-button size="small" color="light">
           <ion-icon name="checkmark-circle-outline"></ion-icon>
         </ion-button>
       </div>
     </ion-card>
+  </div>
+
+  <div id=homelogo>
+    <ion-button size="small" color="dark" (click)="goToHome()">
+      <ion-icon name="home-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id=tasklogo>
+    <ion-button size="small">
+      <ion-icon name="reader-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id=giftlogo>
+    <ion-button size="small" color="dark" (click)="goToRedeem()">
+      <ion-icon name="gift-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id=leaderlogo>
+    <ion-button size="small" color="dark" (click)="goToLeadboard()">
+      <ion-icon name="bar-chart-outline"></ion-icon>
+    </ion-button>
+  </div>
+
+  <div id=profilelogo>
+    <ion-button size="small" color="dark" (click)="goToUser()">
+      <ion-icon name="person-circle-outline"></ion-icon>
+    </ion-button>
   </div>
 
 </ion-content>
