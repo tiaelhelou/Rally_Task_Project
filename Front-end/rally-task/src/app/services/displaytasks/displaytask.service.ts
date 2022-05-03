@@ -11,7 +11,7 @@ export interface Task{
 })
 export class DisplayTaskService {
 
-  private url: "http://localhost/Rally_Task/";
+  private url: "http://localhost/RallyTask/";
 
   constructor(private http: HttpClient) { }
 

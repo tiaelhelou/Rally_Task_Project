@@ -14,10 +14,10 @@
   </ion-header>
 
 
-  <div>
-    <ion-card id=user1rec>
+  <div id=user1rec>
+    <ion-card *ngFor="let leadboard of leadboards">
       <ion-card-header>
-        <ion-card-subtitle>Talia El Helou => 1000pts</ion-card-subtitle>
+        <ion-card-subtitle>{{leadboard.user_name}} => {{leadboard.user_points}}pts</ion-card-subtitle>
       </ion-card-header>
     </ion-card>
   </div>
@@ -26,19 +26,13 @@
     <ion-icon size="large" name="ribbon-outline"></ion-icon>
   </div>
 
-  <div id=user2rec></div>
-
   <div id=user2>
     <ion-icon size="large" name="ribbon-outline"></ion-icon>
   </div>
 
-  <div id=user3rec></div>
-
   <div id=user3>
     <ion-icon size="large" name="ribbon-outline"></ion-icon>
   </div>
-
-  <div id=user4rec></div>
 
   <div id=user4text>
     <ion-text >
@@ -46,15 +40,11 @@
     </ion-text>
   </div>
 
-  <div id=user5rec></div>
-
   <div id=user5text>
     <ion-text >
       5th
     </ion-text>
   </div>
-
-  <div id=user6rec></div>
 
   <div id=user6text>
     <ion-text >
@@ -62,15 +52,11 @@
     </ion-text>
   </div>
 
-  <div id=user7rec></div>
-
   <div id=user7text>
     <ion-text>
       7th
     </ion-text>
   </div>
-
-  <div id=user8rec></div>
 
   <div id=user8text>
     <ion-text >

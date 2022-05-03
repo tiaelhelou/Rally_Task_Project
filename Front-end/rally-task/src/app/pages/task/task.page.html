@@ -13,10 +13,10 @@
     </ion-toolbar>
   </ion-header>
 
-  <div>
-    <ion-card id=task>
+  <div id=task>
+    <ion-card *ngFor="let task of tasks">
       <ion-card-header>
-        <ion-card-subtitle>Cleanup Beach 10pts</ion-card-subtitle>
+        <ion-card-subtitle>{{task.task_name}} {{task.task_point}}pts </ion-card-subtitle>
       </ion-card-header>
       <div id=button>
         <ion-button size="small" color="light">
@@ -57,7 +57,3 @@
   </div>
 
 </ion-content>
-
-<!--
-  *ngFor="let task of tasks"
-  {{task.task_name}} {{task.task_point}} -->
