@@ -9,7 +9,7 @@ $data = json_decode(file_get_contents("php://input"));
 $username = $data->user_username;
 $password = $data->user_password;
 
-$query = $mysqli->prepare("SELECT user_id FROM users WHERE user_username = $username and user_password = $password;");
+$query = $mysqli->prepare("SELECT user_id FROM users WHERE user_username = $username AND user_password = $password;");
 $query->execute();
 $account_result = $query->get_result();
 $row = mysqli_fetch_row($account_result);

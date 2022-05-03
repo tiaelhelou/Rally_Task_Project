@@ -3,7 +3,7 @@
 header('Access-Control-Allow-Origin: *');
 
 include('ConnecttoDb\my_db.php'); 
-include('Login');
+include('Login.php');
 
 $data = json_decode(file_get_contents("php://input"));
 
@@ -39,6 +39,7 @@ $gid = $row[0];
 
 
 $query = $mysqli->prepare("INSERT INTO users_redeems_gifts (users_user_id, gifts_gift_id) VALUES (?, ?)");
-        $query->bind_param("ii", $id, $gid);
-        $query->execute();
+$query->bind_param("ii", $id, $gid);
+$query->execute();
+
 ?>

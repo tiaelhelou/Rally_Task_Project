@@ -4,7 +4,7 @@ header('Access-Control-Allow-Origin: *');
 
 include('ConnecttoDb\my_db.php'); 
 
-$query = $mysqli->prepare("SELECT task_name, task_points FROM tasks WHERE task_status == 'undergoing' ;);
+$query = $mysqli->prepare("SELECT task_name, task_points FROM tasks WHERE task_status = 'undergoing';");
 $query->execute();
 $task_result = $query->get_result();
 

@@ -3,7 +3,7 @@
 header('Access-Control-Allow-Origin: *');
 
 include('ConnecttoDb\my_db.php'); 
-include('Login');
+include('Login.php');
 
 $data = json_decode(file_get_contents("php://input"));
 
@@ -16,7 +16,7 @@ $row = mysqli_fetch_row($tid_result);
 $tid = $row[0];
 
 
-$query = $mysqli->prepare("UPDATE tasks SET users_user_id = $id, task_status = 'completed'WHERE task_id = $tid;");
+$query = $mysqli->prepare("UPDATE tasks SET users_user_id = $id, task_status = 'completed' WHERE task_id = $tid;");
 $query->execute();
 
 
