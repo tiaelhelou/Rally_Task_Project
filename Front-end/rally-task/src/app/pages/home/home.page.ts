@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Leadboard, RecommendedTask, UserhomeService } from '../../services/usershome/userhome.service';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +9,14 @@ import { Router } from '@angular/router';
 })
 export class HomePage {
 
-  constructor(private router: Router) {}
+  rtasks: RecommendedTask[];
+  leadboards: Leadboard[];
+
+  constructor(private router: Router, private service: UserhomeService) {}
   
   ngOnInit() {
+    this.service.getRecommendedTask().subscribe ( response => {this.rtasks = response;} )
+    this.service.getLeadboard().subscribe ( response => {this.leadboards = response;} )
   }
 
   goToTAsk(){
