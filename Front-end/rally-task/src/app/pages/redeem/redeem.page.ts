@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DisplayredeemService, Gift, Point } from '../../services/displayredeems/displayredeem.service';
 
 @Component({
   selector: 'app-redeem',
@@ -8,9 +9,14 @@ import { Router } from '@angular/router';
 })
 export class RedeemPage implements OnInit {
 
-  constructor(private router: Router) { }
+  gifts: Gift[];
+  points: Point[];
+
+  constructor(private router: Router, private service: DisplayredeemService) { }
 
   ngOnInit() {
+    this.service.getGift().subscribe ( response => {this.gifts = response;} )
+    this.service.getPoint().subscribe ( response => {this.points = response;} )
   }
 
   goToHome(){

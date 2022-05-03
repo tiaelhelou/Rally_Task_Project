@@ -19,7 +19,13 @@
     </ion-text>
   </div>
 
-  <div id=pointsrec></div>
+  <div id=pointsrec>
+    <ion-card   color = dark *ngFor="let point of points">
+      <ion-card-header>
+        <ion-card-subtitle>{{point.user_points}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
 
   <div id=giftstext>
     <ion-text color="dark">
@@ -27,22 +33,25 @@
     </ion-text>
   </div>
 
-  <div id=gift1rec></div>
+  <div id=gift1rec>
+    <ion-card   color = dark *ngFor="let gift of gifts">
+      <ion-card-header>
+        <ion-card-subtitle>{{gift.gift_name}} {{gift.gift_points}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
+
   <div id=gift1logo>
     <ion-button size="small" color="light">
       <ion-icon name="enter-outline"></ion-icon>
     </ion-button>
   </div>
 
-  <div id=gift2rec></div>
-
   <div id=gift2logo>
     <ion-button size="small" color="light">
       <ion-icon name="enter-outline"></ion-icon>
     </ion-button>
   </div>
-
-  <div id=gift3rec></div>
 
   <div id=gift3logo>
     <ion-button size="small" color="light">
