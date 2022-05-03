@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { DisplayleadboardService, Leadboard } from '../../services/displayleadrboards/displayleadboard.service';
 
 
 @Component({
@@ -9,9 +10,12 @@ import { Router } from '@angular/router';
 })
 export class LeadboardPage implements OnInit {
 
-  constructor(private router: Router) { }
+  leadboards: Leadboard[];
+
+  constructor(private router: Router, private service: DisplayleadboardService) { }
 
   ngOnInit() {
+    this.service.getleadboard().subscribe( response => {this.leadboards = response;} );
   }
 
   goToHome(){
