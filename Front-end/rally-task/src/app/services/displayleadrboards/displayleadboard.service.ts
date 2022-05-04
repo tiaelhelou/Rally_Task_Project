@@ -11,7 +11,7 @@ export interface Leadboard{
 })
 export class DisplayleadboardService {
 
-  private url: "http://localhost/RallyTask/";
+  private url= "http://localhost/RallyTask/";
 
   constructor(private http: HttpClient) { }
 

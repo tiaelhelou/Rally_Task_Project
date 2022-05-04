@@ -15,7 +15,7 @@ export interface Point{
 })
 export class DisplayredeemService {
 
-  private url: "http://localhost/RallyTask/";
+  private url= "http://localhost/RallyTask/";
 
   constructor(private http: HttpClient) { }
 
@@ -26,5 +26,4 @@ export class DisplayredeemService {
   getPoint() {
     return this.http.get<[Point]>(this.url + "Redeem Page Point.php");
   }
-}
 }
