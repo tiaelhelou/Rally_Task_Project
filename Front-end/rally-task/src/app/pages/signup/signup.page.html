@@ -13,61 +13,62 @@
     </ion-toolbar>
   </ion-header>
 
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
 
-  <div id=fullnamerec></div>
+    <div id=fullnamerec></div>
 
-  <div id=fullname>
-    <ion-input placeholder="Fullname"></ion-input>
-  </div>
+    <div id=fullname>
+      <ion-input ngModel placeholder="Fullname" type="text" name="user_name"></ion-input>
+    </div>
 
-  <div id=fullnamelogo>
-    <ion-icon size="medium" name="person"></ion-icon>
-  </div>
+    <div id=fullnamelogo>
+      <ion-icon size="medium" name="person"></ion-icon>
+    </div>
 
-  <div id=usernamerec></div>
+    <div id=usernamerec></div>
 
-  <div id=username>
-    <ion-input placeholder="Username"></ion-input>
-  </div>
+    <div id=username>
+      <ion-input ngModel placeholder="Username" type="text" name="user_username"></ion-input>
+    </div>
 
-  <div id=usernamelogo>
-    <ion-icon size="medium" name="person"></ion-icon>
-  </div>
+    <div id=usernamelogo>
+      <ion-icon size="medium" name="person"></ion-icon>
+    </div>
 
-  <div id=passwordrec></div>
+    <div id=passwordrec></div>
 
-  <div id=password>
-    <ion-input type="password" placeholder="Password"></ion-input>
-  </div>
+    <div id=password>
+      <ion-input ngModel placeholder="Password" type="password" name="user_password"></ion-input>
+    </div>
 
-  <div id=passwordlogo>
-    <ion-icon size="medium" name="lock-closed"></ion-icon>
-  </div>
+    <div id=passwordlogo>
+      <ion-icon size="medium" name="lock-closed"></ion-icon>
+    </div>
 
-  <div id=birthdayrec></div>
+    <div id=birthdayrec></div>
 
-  <div id=birthday>
-    <ion-input type="date"></ion-input>
-  </div>
+    <div id=birthday>
+      <ion-input ngModel type="date" name="user_date_of_birth"></ion-input>
+    </div>
 
-  <div id=genderrec></div>
+    <div id=genderrec></div>
 
-  <div id=gender>
-    <ion-select placeholder="Gender">
-      <ion-select-option value="f">Female</ion-select-option>
-      <ion-select-option value="m">Male</ion-select-option>
-    </ion-select>
-  </div>
+    <div id=gender>
+      <ion-select ngModel placeholder="Gender" type="text" name="user_gender">
+        <ion-select-option value="f">Female</ion-select-option>
+        <ion-select-option value="m">Male</ion-select-option>
+      </ion-select>
+    </div>
 
-  <div id=phonenumberrec></div>
+    <div id=phonenumberrec></div>
 
-  <div id=phonenumber>
-    <ion-input placeholder="Phone Number"></ion-input>
-  </div>
+    <div id=phonenumber>
+      <ion-input ngModel placeholder="Phone Number" type="text" name="user_phone_number"></ion-input>
+    </div>
 
-  <div id=logoutbtn>
-    <ion-button color="danger" expand="block" (click)="signup()">Sign Up</ion-button>
-  </div>
-
+    <div id=logoutbtn>
+      <ion-button color="danger" type="submit" expand="block" name="submit" (click)="signup()">Sign Up</ion-button>
+    </div>
+  </form>
 
 </ion-content>
