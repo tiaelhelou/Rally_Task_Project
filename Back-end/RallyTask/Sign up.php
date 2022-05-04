@@ -23,21 +23,36 @@ $query->execute();
 $username_result = $query->get_result();
 
 if(empty($account_result)){
+	
 	if(empty($username_result)){
 		$query = $mysqli->prepare("INSERT INTO users (user_name, user_username, user_password, user_gender, user_date_of_birth, user_phone_number, user_points) VALUES (?, ?, ?, ? , ?, ?)");
 		$query->bind_param("sssssii", $name , $username , $password , $gender, $birthday , $phone , $points);
 		$query->execute();
 
-		echo "Account created successfully";
+		$response = [];
+		$response["status"] = "Account created successfully!";
+
+		$json_response = json_encode($response);
+		echo $json_response;
+
 	}
 	else{
-		echo "Username already exist!";
+
+		$response = [];
+		$response["status"] = "Username already exist!";
+
+		$json_response = json_encode($response);
+		echo $json_response;
 	}
 
 	
 }
 else{
-	echo "You already have an account!";
+	$response = [];
+	$response["status"] = "You already have an account!";
+
+	$json_response = json_encode($response);
+	echo $json_response;
 }
 
 ?>
