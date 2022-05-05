@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { EditprofileService, User } from '../../services/editprofiles/editprofile.service';
@@ -33,6 +34,7 @@ export class EditprofilePage implements OnInit {
     if (this.status.status == true){
       this.presentToast();
       this.router.navigate(['/userprofile']);
+    }
   }
 
   async presentToast() {
