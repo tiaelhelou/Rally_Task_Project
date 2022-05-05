@@ -9,9 +9,11 @@ $query->execute();
 $rank_result = $query->get_result();
 
 $rank = [];
+$count =0;
 
-while($users = $rank_result->fetch_assoc()){
+while($users = $rank_result->fetch_assoc() and $count < 5){
     $rank[] = $users; 
+    $count++;
 }
 
 $json_rank = json_encode($rank);

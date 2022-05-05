@@ -13,9 +13,10 @@ $query->execute();
 $ctask_result = $query->get_result();
 
 $ctask = [];
-
-while($tasks = $ctask_result->fetch_assoc()){
+$count =0;
+while($tasks = $ctask_result->fetch_assoc() and $count<2){
     $ctask[] = $tasks;
+    $count++;
 }
 
 $json_ctask = json_encode($ctask);

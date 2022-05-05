@@ -13,9 +13,11 @@ $query->execute();
 $gift_result = $query->get_result();
 
 $gift = [];
+$count =0;
 
-while($gifts = $gift_result->fetch_assoc()){
+while($gifts = $gift_result->fetch_assoc() and $count<3){
     $gift[] = $gifts;
+    $count++;
 }
 
 $json_gift = json_encode($gift);

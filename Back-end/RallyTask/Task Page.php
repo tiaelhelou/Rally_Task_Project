@@ -9,9 +9,11 @@ $query->execute();
 $task_result = $query->get_result();
 
 $task = [];
+$count =0;
 
-while($tasks = $task_result->fetch_assoc()){
+while($tasks = $task_result->fetch_assoc() and $count<5){
     $task[] = $tasks;
+    $count++;
 }
 
 $json_task = json_encode($task);

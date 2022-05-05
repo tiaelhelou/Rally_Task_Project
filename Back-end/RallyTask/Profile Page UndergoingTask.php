@@ -9,9 +9,11 @@ $query->execute();
 $utask_result = $query->get_result();
 
 $utask = [];
+$count =0;
 
-while($tasks = $utask_result->fetch_assoc()){
+while($tasks = $utask_result->fetch_assoc() and $count<2){
     $utask[] = $tasks;
+    $count++;
 }
 
 $json_utask = json_encode($utask);

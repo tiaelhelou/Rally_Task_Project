@@ -20,9 +20,11 @@ $query->execute();
 $rtask_result = $query->get_result();
 
 $rtask = [];
+$count =0;
 
-while($tasks = $rtask_result->fetch_assoc()){
+while($tasks = $rtask_result->fetch_assoc() and $count < 1){
     $rtask[] = $tasks;
+    $count++;
 }
 
 $json_rtask = json_encode($rtask);
