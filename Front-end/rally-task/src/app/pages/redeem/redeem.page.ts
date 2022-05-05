@@ -42,8 +42,9 @@ export class RedeemPage implements OnInit {
     this.service2.sendId(val).subscribe (response => {this.status = response;} )
     if (this.status.status == true){
       this.presentToast();
+      this.router.navigate(['/redeem']);
     }
-   
+ 
   }
 
   async presentToast() {
