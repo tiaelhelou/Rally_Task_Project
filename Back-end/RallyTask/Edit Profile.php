@@ -3,7 +3,9 @@
 header('Access-Control-Allow-Origin: *');
 
 include('ConnecttoDb\my_db.php'); 
-include('Login.php');
+
+session_start();
+$id = $_SESSION['ID']; 
 
 $data = json_decode(file_get_contents("php://input"));
 
@@ -16,11 +18,15 @@ $new_phone = $data->user_phone_number;
 $interest = $data->user_interest_category;
 
 
-$query = $mysqli->prepare("UPDATE users SET user_name = $new_name, user_username = $new_username, user_password = 
-$new_password, user_gender = $new_gender, user_date_of_birth = $new_birthday, user_phone_number = $new_phone, user_interest_category = $interest WHERE user_id = $id;");
+$query = $mysqli->prepare("UPDATE users SET user_name = ?, user_username = ?, user_password = 
+?, user_gender = ?, user_date_of_birth = ?, user_phone_number = ?, user_interest_category = ? WHERE user_id = $id;");
+$query->bind_param("sssssis", $new_name , $new_username , $new_password , $new_gender, $new_birthday , $new_phone , $interest);
 $query->execute();
 
-echo "Updated successfully";
+$response = [];
+$response["status"] = "Updated successfully";
 
+$json_response = json_encode($response);
+echo $json_response;
 
 ?>

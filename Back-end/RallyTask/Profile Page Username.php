@@ -3,9 +3,12 @@
 header('Access-Control-Allow-Origin: *');
 
 include('ConnecttoDb\my_db.php'); 
-include('Login.php');
 
-$query = $mysqli->prepare("SELECT user_username FROM users WHERE user_id = $id;");
+session_start();
+$id = $_SESSION['ID'];
+
+$query = $mysqli->prepare("SELECT user_username FROM users WHERE user_id = ?;");
+$query->bind_param('i',$id);
 $query->execute();
 $user_result = $query->get_result();
 
