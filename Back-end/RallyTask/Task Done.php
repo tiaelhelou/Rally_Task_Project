@@ -44,4 +44,10 @@ $query = $mysqli->prepare("UPDATE users SET user_points = $new_points WHERE user
 $query->bind_param('i',$id);
 $query->execute();
 
+$response = [];
+$response["status"] = true;
+
+$json_response = json_encode($response);
+echo $json_response;
+return;
 ?>

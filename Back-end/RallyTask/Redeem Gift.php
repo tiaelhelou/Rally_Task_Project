@@ -49,4 +49,11 @@ $query = $mysqli->prepare("INSERT INTO users_redeems_gifts (users_user_id, gifts
 $query->bind_param("ii", $id, $gid);
 $query->execute();
 
+$response = [];
+$response["status"] = true;
+
+$json_response = json_encode($response);
+echo $json_response;
+return;
+
 ?>

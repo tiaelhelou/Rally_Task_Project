@@ -24,9 +24,10 @@ $query->bind_param("sssssis", $new_name , $new_username , $new_password , $new_g
 $query->execute();
 
 $response = [];
-$response["status"] = "Updated successfully";
+$response["status"] = true;
 
 $json_response = json_encode($response);
 echo $json_response;
+return;
 
 ?>
