@@ -29,15 +29,15 @@
 
 
 
-<div class="completedtask">
-  <ion-card   color = dark *ngFor="let ctask of ctasks">
-    <ion-card-header>
-      <ion-card-subtitle>{{ctask.task_name}}</ion-card-subtitle>
-    </ion-card-header>
-  </ion-card>
-</div>
+  <div class="completedtask">
+    <ion-card color=dark *ngFor="let ctask of ctasks">
+      <ion-card-header>
+        <ion-card-subtitle>{{ctask.task_name}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  </div>
 
-  
+
 
 
   <div id=undertasktext>
@@ -49,7 +49,7 @@
 
 
   <div class="undergoingtask">
-    <ion-card   color = dark *ngFor="let utask of utasks">
+    <ion-card color=dark *ngFor="let utask of utasks">
       <ion-card-header>
         <ion-card-subtitle>{{utask.task_name}}</ion-card-subtitle>
       </ion-card-header>
@@ -85,7 +85,7 @@
     <ion-button size="small">
       <ion-icon name="person-circle-outline"></ion-icon>
     </ion-button>
-  </div>     
+  </div>
 
 
 </ion-content>

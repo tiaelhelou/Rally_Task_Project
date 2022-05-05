@@ -15,7 +15,7 @@
 
 
   <div class="leaderboard">
-    <ion-card *ngFor="let leadboard of leadboards">
+    <ion-card color=dark *ngFor="let leadboard of leadboards">
       <ion-card-header>
         <ion-card-subtitle>{{leadboard.user_name}} = {{leadboard.user_points}}pts</ion-card-subtitle>
       </ion-card-header>
@@ -35,34 +35,18 @@
   </div>
 
   <div id=user4text>
-    <ion-text >
+    <ion-text>
       4th
     </ion-text>
   </div>
 
   <div id=user5text>
-    <ion-text >
+    <ion-text>
       5th
     </ion-text>
   </div>
 
-  <div id=user6text>
-    <ion-text >
-      6th
-    </ion-text>
-  </div>
 
-  <div id=user7text>
-    <ion-text>
-      7th
-    </ion-text>
-  </div>
-
-  <div id=user8text>
-    <ion-text >
-      8th
-    </ion-text>
-  </div>
 
   <div id=homelogo>
     <ion-button size="small" color="dark" (click)="goToHome()">

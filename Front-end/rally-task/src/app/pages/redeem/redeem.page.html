@@ -13,7 +13,7 @@
     </ion-toolbar>
   </ion-header>
 
-  
+
   <div id=pointstext>
     <ion-text color="dark">
       Points
@@ -23,7 +23,7 @@
 
 
   <div id=pointsrec>
-    <ion-card   color = dark *ngFor="let point of points">
+    <ion-card color=dark *ngFor="let point of points">
       <ion-card-header>
         <ion-card-subtitle>{{point.user_points}}</ion-card-subtitle>
       </ion-card-header>
@@ -42,7 +42,7 @@
 
 
   <div class="gift">
-    <ion-card *ngFor="let gift of gifts">
+    <ion-card color=dark *ngFor="let gift of gifts">
       <ion-card-header>
         <ion-card-subtitle>{{gift.gift_name}} {{gift.gift_points}}</ion-card-subtitle>
       </ion-card-header>
@@ -53,15 +53,6 @@
       </div>
     </ion-card>
   </div>
-
-
-
-
-
-
-
-
- 
 
   <div id=homelogo>
     <ion-button size="small" color="dark" (click)="goToHome()">
@@ -76,7 +67,7 @@
   </div>
 
   <div id=giftlogo>
-    <ion-button size="small" >
+    <ion-button size="small">
       <ion-icon name="gift-outline"></ion-icon>
     </ion-button>
   </div>

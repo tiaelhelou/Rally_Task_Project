@@ -18,4 +18,6 @@ export class DisplayleadboardService {
   getleadboard() {
     return this.http.get<[Leadboard]>(this.url + "Leadboard Page.php");
   }
+
+  
 }

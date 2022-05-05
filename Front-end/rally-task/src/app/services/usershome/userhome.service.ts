@@ -24,6 +24,7 @@ export class UserhomeService {
   }
 
   getLeadboard() {
-    return this.http.get<[Leadboard]>(this.url + "Leadboard Page.php");
+    return this.http.get<[Leadboard]>(this.url + "Leadboard Page Home.php");
   }
+ 
 }

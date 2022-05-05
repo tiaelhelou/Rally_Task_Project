@@ -9,7 +9,7 @@ ion-toolbar {
 ion-title.title-large {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 0%;
     font-size: 30px;
     text-align: center;
 }
@@ -27,13 +27,15 @@ ion-title.title-large {
 
 
 
+
 #homelogo {
     font-size: x-large;
     color: grey;
     text-align: center;
     position: absolute;
-    left: 7%;
-    margin-block-start: 40%;
+    left: 8%;
+    top: 90%;
+
 }
 
 #tasklogo {
@@ -41,8 +43,9 @@ ion-title.title-large {
     color: grey;
     text-align: center;
     position: absolute;
-    left: 24%;
-    margin-block-start: 40%;
+    left: 25%;
+    top: 90%;
+
 }
 
 #giftlogo {
@@ -50,8 +53,9 @@ ion-title.title-large {
     color: grey;
     text-align: center;
     position: absolute;
-    left: 41%;
-    margin-block-start: 40%;
+    left: 42%;
+    top: 90%;
+
 }
 
 #leaderlogo {
@@ -59,8 +63,9 @@ ion-title.title-large {
     color: grey;
     text-align: center;
     position: absolute;
-    left: 58%;
-    margin-block-start: 40%;
+    left: 59%;
+    top: 90%;
+
 }
 
 #profilelogo {
@@ -68,6 +73,7 @@ ion-title.title-large {
     color: grey;
     text-align: center;
     position: absolute;
-    left: 75%;
-    margin-block-start: 40%;
+    left: 76%;
+    top: 90%;
+
 }

@@ -17,8 +17,7 @@
 
   <div id=about>
     <ion-text>
-      The target of the app is to make people contribute to the society 
-      and in return they get a little reward. 
+      The target of the app is to make people contribute to the society and in return they get a little reward.
     </ion-text>
   </div>
 
@@ -35,7 +34,7 @@
 
 
   <div class="recommendtask">
-    <ion-card   color = dark *ngFor="let rtask of rtasks">
+    <ion-card color=dark *ngFor="let rtask of rtasks">
       <ion-card-header>
         <ion-card-subtitle>{{rtask.task_name}}</ion-card-subtitle>
       </ion-card-header>
@@ -54,32 +53,13 @@
 
   <div class="leaderboard">
 
-    <ion-card   color = dark *ngFor="let leadboard of leadboards">
+    <ion-card color=dark *ngFor="let leadboard of leadboards">
       <ion-card-header>
         <ion-card-subtitle>{{leadboard.user_name}} = {{leadboard.user_points}}pts</ion-card-subtitle>
       </ion-card-header>
     </ion-card>
   </div>
 
-
-
-
-  <!-- <div id=leader1logo>
-    <ion-icon name="ribbon-outline"></ion-icon>
-  </div>
-
-  <div id=leader2logo>
-    <ion-icon name="ribbon-outline"></ion-icon>
-  </div>
-
-  <div id=leader3logo>
-    <ion-icon name="ribbon-outline"></ion-icon>
-  </div> -->
- 
-
-
-
-  
   <div id=homelogo>
     <ion-button size="small">
       <ion-icon name="home-outline"></ion-icon>
