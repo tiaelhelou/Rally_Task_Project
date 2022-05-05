@@ -23,11 +23,15 @@
 
 
 
+
+
   <div id=recommendtext>
     <ion-text color="light">
       Recommend Task
     </ion-text>
   </div>
+
+
 
   <div class="recommendtask">
     <ion-card   color = dark *ngFor="let rtask of rtasks">
@@ -37,21 +41,29 @@
     </ion-card>
   </div>
 
+
+
   <div id=leadertext>
     <ion-text color="light">
       Leaderboard
     </ion-text>
   </div>
 
+
+
   <div class="leaderboard">
+
     <ion-card   color = dark *ngFor="let leadboard of leadboards">
       <ion-card-header>
-        <ion-card-subtitle>{{leadboard.user_name}} => {{leadboard.user_points}}pts</ion-card-subtitle>
+        <ion-card-subtitle>{{leadboard.user_name}} = {{leadboard.user_points}}pts</ion-card-subtitle>
       </ion-card-header>
     </ion-card>
   </div>
 
-  <div id=leader1logo>
+
+
+
+  <!-- <div id=leader1logo>
     <ion-icon name="ribbon-outline"></ion-icon>
   </div>
 
@@ -61,8 +73,12 @@
 
   <div id=leader3logo>
     <ion-icon name="ribbon-outline"></ion-icon>
-  </div>
+  </div> -->
  
+
+
+
+  
   <div id=homelogo>
     <ion-button size="small">
       <ion-icon name="home-outline"></ion-icon>

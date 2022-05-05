@@ -10,6 +10,7 @@ import { SignupService, User } from '../../services/signups/signup.service';
 })
 export class SignupPage implements OnInit {
   user: User;
+  status: boolean;
 
   constructor(private router: Router, private service: SignupService) { }
 
@@ -18,9 +19,10 @@ export class SignupPage implements OnInit {
 
   onSubmit(form: NgForm) {
     this.user = form.value;
-    this.service.addUser(this.user).subscribe(response => {
-      console.log(response);
-    })
+    this.status = false;
+    this.service.addUser(this.user).subscribe(response => {console.log(response); })
+    //this.service.addUser(this.user).subscribe (response => {this.status = response;} )
+  
   }
 
   signup() {

@@ -13,13 +13,13 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id=task>
+  <div>
     <ion-card *ngFor="let task of tasks">
       <ion-card-header>
-        <ion-card-subtitle>{{task.task_name}} {{task.task_point}}pts </ion-card-subtitle>
+        <ion-card-subtitle>{{task.task_name}}<br><br>{{task.task_points}}pts </ion-card-subtitle>
       </ion-card-header>
       <div id=button>
-        <ion-button size="small" color="light">
+        <ion-button id={{task.task_id}} size="small" color="light" >
           <ion-icon name="checkmark-circle-outline"></ion-icon>
         </ion-button>
       </div>

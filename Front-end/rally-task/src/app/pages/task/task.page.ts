@@ -10,6 +10,7 @@ import { DisplayTaskService, Task } from '../../services/displaytasks/displaytas
 export class TaskPage implements OnInit {
 
   tasks: Task[];
+  id: number;
 
   constructor(private router: Router, private service: DisplayTaskService) { }
 

@@ -14,10 +14,10 @@
   </ion-header>
 
 
-  <div id=user1rec>
+  <div class="leaderboard">
     <ion-card *ngFor="let leadboard of leadboards">
       <ion-card-header>
-        <ion-card-subtitle>{{leadboard.user_name}} => {{leadboard.user_points}}pts</ion-card-subtitle>
+        <ion-card-subtitle>{{leadboard.user_name}} = {{leadboard.user_points}}pts</ion-card-subtitle>
       </ion-card-header>
     </ion-card>
   </div>

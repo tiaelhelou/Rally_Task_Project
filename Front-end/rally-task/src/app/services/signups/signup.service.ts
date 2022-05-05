@@ -7,7 +7,7 @@ export interface User {
   user_password : string,
   user_gender : string,
   user_date_of_birth : string,
-  user_phone_number : string
+  user_phone_number : number
   
 }
 
