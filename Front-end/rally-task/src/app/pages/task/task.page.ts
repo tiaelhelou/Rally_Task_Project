@@ -13,7 +13,6 @@ import { DonetaskService } from '../../services/donetasks/donetask.service';
 export class TaskPage implements OnInit {
 
   tasks: Task[];
-  id: number;
   status: any;
 
   constructor(private router: Router, private service: DisplayTaskService, private service2: DonetaskService, public toastController: ToastController) { }
@@ -49,7 +48,7 @@ export class TaskPage implements OnInit {
 
   async presentToast() {
     const toast = await this.toastController.create({
-      message: 'Invalid Information',
+      message: 'Congratulations',
       duration: 2000
     });
     toast.present();

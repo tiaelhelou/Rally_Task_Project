@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 
 export interface Gift {
+  gift_id: number,
   gift_name : string,
   gift_points: number
 }

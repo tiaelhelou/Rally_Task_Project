@@ -47,7 +47,7 @@
         <ion-card-subtitle>{{gift.gift_name}} {{gift.gift_points}}</ion-card-subtitle>
       </ion-card-header>
       <div id=buttongift>
-        <ion-button size="small" color="light">
+        <ion-button size="small" color="light" (click)="getId(gift.gift_id)">
           <ion-icon name="enter-outline"></ion-icon>
         </ion-button>
       </div>
