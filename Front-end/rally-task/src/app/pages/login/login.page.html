@@ -13,6 +13,8 @@
     </ion-toolbar>
   </ion-header>
 
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
   <div id=userrec></div>
 
   <div id=person>
@@ -20,7 +22,7 @@
   </div>
 
   <div id=usertext>
-    <ion-input placeholder="Username"></ion-input>
+    <ion-input ngModel placeholder="Username" type="text" name="user_username"></ion-input>
   </div>
 
 
@@ -31,11 +33,12 @@
   </div>
 
   <div id=passtext>
-    <ion-input type="password" placeholder="Password"></ion-input>
+    <ion-input ngModel type="password" placeholder="Password" name="user_password"></ion-input>
   </div>
 
   <div id=logbtn>
-    <ion-button color="danger" expand="block" (click)="login()">Login</ion-button>
+    <ion-button color="danger" type="submit" expand="block" name="submit">Login</ion-button>
   </div>
+  </form>
 
 </ion-content>

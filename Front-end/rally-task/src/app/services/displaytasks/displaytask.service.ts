@@ -17,7 +17,8 @@ export class DisplayTaskService {
   constructor(private http: HttpClient) { }
 
   getTask() {
-    return this.http.get<[Task]>(this.url + "Task Page.php?task_id=" + task_id);
+    return this.http.get<[Task]>(this.url + "Task Page.php");
   }
+
 
 }
