@@ -31,7 +31,7 @@ else{
 	$_SESSION["ID"] = $id;
 
 	$response = [];
-	$response["status"] = true;
+	$response["status"] = $id;
 
 	$json_response = json_encode($response);
 	echo $json_response;

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { DisplayleadboardService, Leadboard } from '../../services/displayleadrboards/displayleadboard.service';
 
 
@@ -12,26 +12,45 @@ export class LeadboardPage implements OnInit {
 
   leadboards: Leadboard[];
 
-  constructor(private router: Router, private service: DisplayleadboardService) { }
+  constructor(private router: Router, private service: DisplayleadboardService,private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.service.getleadboard().subscribe( response => {this.leadboards = response;} );
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    console.log(id);
   }
 
   goToHome(){
-    this.router.navigate(['/home']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/home'],params);
   }
 
   goToUser(){
-    this.router.navigate(['/userprofile']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/userprofile'],params);
   }
 
   goToTask(){
-    this.router.navigate(['/task']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/task'],params);
   }
 
   goToRedeem() {
-    this.router.navigate(['/redeem']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/redeem'],params);
+    
   }
 
 }

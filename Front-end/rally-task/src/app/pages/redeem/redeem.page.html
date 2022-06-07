@@ -44,7 +44,7 @@
   <div class="gift">
     <ion-card color=dark *ngFor="let gift of gifts">
       <ion-card-header>
-        <ion-card-subtitle>{{gift.gift_name}} {{gift.gift_points}}</ion-card-subtitle>
+        <ion-card-subtitle>{{gift.gift_name}}= {{gift.gift_points}}</ion-card-subtitle>
       </ion-card-header>
       <div id=buttongift>
         <ion-button size="small" color="light" (click)="getId(gift.gift_id)">

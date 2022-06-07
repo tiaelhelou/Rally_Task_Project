@@ -1,0 +1,50 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Welcome
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Rally Task</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id=welcometext>
+    <ion-text color="dark">
+      Welcome!
+    </ion-text>
+  </div>
+
+  <div id=questiontext>
+    <ion-text color="dark">
+      Are you a member?
+    </ion-text>
+  </div>
+
+  <div id=yestext>
+    <ion-text color="dark">
+      Yes
+    </ion-text>
+  </div>
+
+  <div id=notext>
+    <ion-text color="dark">
+      No
+    </ion-text>
+  </div>
+
+  <div id=loginbtn>
+    <ion-button size="small" color="danger" (click)="goTologin()">Login</ion-button>
+  </div>
+
+  <div id=signupbtn>
+    <ion-button size="small" color="danger" (click)="goTosignup()">Sign up</ion-button>
+  </div>
+
+
+
+</ion-content>

@@ -16,7 +16,7 @@
   <div class="task">
     <ion-card color=dark *ngFor="let task of tasks">
       <ion-card-header>
-        <ion-card-subtitle>{{task.task_name}}={{task.task_points}}pts </ion-card-subtitle>
+        <ion-card-subtitle>{{task.task_name}} = {{task.task_points}}pts </ion-card-subtitle>
       </ion-card-header>
       <div id=button>
         <ion-button size="small" color="light" (click)="getId(task.task_id)">

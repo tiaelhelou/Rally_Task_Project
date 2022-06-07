@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { Leadboard, RecommendedTask, UserhomeService } from '../../services/usershome/userhome.service';
 
 @Component({
@@ -11,28 +11,66 @@ export class HomePage {
 
   rtasks: RecommendedTask[];
   leadboards: Leadboard[];
+  status: any;
 
-  constructor(private router: Router, private service: UserhomeService) {}
+  
+  constructor(private router: Router, private service: UserhomeService,private route: ActivatedRoute) {}
   
   ngOnInit() {
-    this.service.getRecommendedTask().subscribe ( response => {this.rtasks = response;} )
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    this.service.getRecommendedTask(id).subscribe ( response => {this.rtasks = response;} )
     this.service.getLeadboard().subscribe ( response => {this.leadboards = response;} )
+    
+
   }
 
   goToTAsk(){
-    this.router.navigate(['/task']);
+    
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/task'],params);
+  
+    
   }
 
   goToUser(){
-    this.router.navigate(['/userprofile']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/userprofile'],params);
+    
+
+   
+   
   }
 
   goToRedeem(){
-    this.router.navigate(['/redeem']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/redeem'],params);
+    
+
+   
+   
+    
   }
 
   goToLeadboard() {
-    this.router.navigate(['/leadboard']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/leadboard'],params);
+    
+
+  
+    
   }
   
 }

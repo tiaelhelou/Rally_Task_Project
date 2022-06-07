@@ -4,17 +4,21 @@ header('Access-Control-Allow-Origin: *');
 
 include('ConnecttoDb\my_db.php'); 
 
-session_start();
-$id = $_SESSION['ID'];
+$id = $_GET['user_id'];
 
 $query = $mysqli->prepare("SELECT user_points FROM users WHERE user_id = ?;");
 $query->bind_param('i',$id);
 $query->execute();
 $point_result = $query->get_result();
-$row = mysqli_fetch_row($point_result);
-$points = $row[0];
 
-$json_points = json_encode($points);
+$point = [];
+
+
+while($users = $point_result->fetch_assoc() ){
+    $point[] = $users;
+}
+
+$json_points = json_encode($point);
 echo $json_points;
 
 ?>

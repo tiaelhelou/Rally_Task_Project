@@ -1,15 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
+    <ion-title >
       Name
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+  <ion-header collapse="condense" *ngFor="let username of usernames">
     <ion-toolbar>
-      <ion-title size="large">Name</ion-title>
+      <ion-title size="large">{{username.user_username}}</ion-title>
     </ion-toolbar>
   </ion-header>
 

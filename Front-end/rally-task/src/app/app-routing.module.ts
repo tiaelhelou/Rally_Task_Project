@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'signup',
+    redirectTo: 'welcome',
     pathMatch: 'full'
   },
   {
@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'leadboard',
     loadChildren: () => import('./pages/leadboard/leadboard.module').then( m => m.LeadboardPageModule)
+  },
+  {
+    path: 'welcome',
+    loadChildren: () => import('./pages/welcome/welcome.module').then( m => m.WelcomePageModule)
   },
 ];
 

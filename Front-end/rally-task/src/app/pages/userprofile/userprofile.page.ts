@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { CompletedTask, UndergoingTask, Username, UserprofileService } from '../../services/usersprofile/userprofile.service';
 
 @Component({
@@ -13,32 +13,55 @@ export class UserprofilePage implements OnInit {
   utasks: UndergoingTask[];
   usernames: Username[];
 
-  constructor(private router: Router, private service: UserprofileService) { }
+  constructor(private router: Router, private service: UserprofileService,private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.service.getCompletedTask().subscribe ( response => {this.ctasks = response;} )
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    this.service.getCompletedTask(id).subscribe ( response => {this.ctasks = response;} )
     this.service.getUndergoingTask().subscribe ( response => {this.utasks = response;} )
-    this.service.getUsername().subscribe ( response => {this.usernames = response;} )
+    this.service.getUsername(id).subscribe ( response => {this.usernames = response;} )
   }
 
   goToTAsk(){
-    this.router.navigate(['/task']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/task'],params);
   }
 
   goToHome(){
-    this.router.navigate(['/home']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/home'],params);
   }
 
   goToRedeem(){
-    this.router.navigate(['/redeem']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/redeem'],params);
   }
 
   goToLeadboard() {
-    this.router.navigate(['/leadboard']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/leadboard'],params);
+  
   }
 
   goToeditProfile(){
-    this.router.navigate(['/editprofile']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/editprofile'],params);
+   
   }
 
 }

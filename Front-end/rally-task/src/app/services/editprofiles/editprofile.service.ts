@@ -20,7 +20,12 @@ export class EditprofileService {
 
   constructor(private http: HttpClient) { }
 
-  addUser(user:User){
-    return this.http.post(this.url+ "Edit Profile.php", JSON.stringify(user));
+  addUser(user:User, user_id){
+
+    const update = {user_name: user.user_name, user_username: user.user_username, user_password: user.user_password,
+      user_gender: user.user_gender, user_date_of_birth: user.user_date_of_birth, user_phone_number: user.user_phone_number, 
+      user_interest_category: user.user_interest_category, user_id: user_id};
+
+    return this.http.post(this.url+ "Edit Profile.php", JSON.stringify(update));
   }
 }

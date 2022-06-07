@@ -20,11 +20,12 @@ export class DisplayredeemService {
 
   constructor(private http: HttpClient) { }
 
-  getGift() {
-    return this.http.get<[Gift]>(this.url + "Redeem Page Gift.php");
+  getGift(user_id) {
+    return this.http.get<[Gift]>(this.url + "Redeem Page Gift.php?user_id=" + user_id);
   }
 
-  getPoint() {
-    return this.http.get<[Point]>(this.url + "Redeem Page Point.php");
+  getPoint(user_id) {
+    
+    return this.http.get<[Point]>(this.url + "Redeem Page Point.php?user_id=" + user_id);
   }
 }

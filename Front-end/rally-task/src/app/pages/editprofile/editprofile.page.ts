@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { EditprofileService, User } from '../../services/editprofiles/editprofile.service';
 
@@ -14,27 +14,36 @@ export class EditprofilePage implements OnInit {
   user: User;
   status: any;
 
-  constructor(private router: Router, private service: EditprofileService, public toastController: ToastController) { }
+  constructor(private router: Router, private service: EditprofileService, public toastController: ToastController, private route: ActivatedRoute) { }
 
   ngOnInit() {
+    const id = this.route.snapshot.queryParamMap.get('userid');
   }
 
   goToUser(){
-    this.router.navigate(['/userprofile']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+    this.router.navigate(['/userprofile'],params);
   }
 
   goTologin() {
-    this.router.navigate(['/login']);
+    this.router.navigate(['/welcome']);
   }
 
   onSubmit(form: NgForm) {
-    this.user = form.value;
-    this.service.addUser(this.user).subscribe (response => {this.status = response;} )
-
-    if (this.status.status == true){
-      this.presentToast();
-      this.router.navigate(['/userprofile']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
     }
+    
+    this.user = form.value;
+    this.service.addUser(this.user, id).subscribe (response => {this.status = response;} )
+
+      this.presentToast();
+      this.router.navigate(['/userprofile'],params);
+    
   }
 
   async presentToast() {

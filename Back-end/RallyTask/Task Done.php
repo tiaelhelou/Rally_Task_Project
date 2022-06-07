@@ -4,12 +4,11 @@ header('Access-Control-Allow-Origin: *');
 
 include('ConnecttoDb\my_db.php'); 
 
-session_start();
-$id = $_SESSION['ID'];
-
 $data = json_decode(file_get_contents("php://input"));
 
 $t_id = $data->task_id;
+$id = $data->user_id;
+
 
 $query = $mysqli->prepare("SELECT task_id FROM tasks WHERE task_id = ?;");
 $query->bind_param('i',$t_id);

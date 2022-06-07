@@ -10,7 +10,10 @@ export class RedeemgiftService {
 
   constructor(private http: HttpClient) { }
 
-  sendId(id:number){
-    return this.http.post(this.url+ "Redeem Gift.php", JSON.stringify(id));
+  sendId(gift_id, user_id){
+
+    const redeemed = {gift_id: gift_id, user_id: user_id};
+
+    return this.http.post(this.url+ "Redeem Gift.php", JSON.stringify(redeemed));
   }
 }

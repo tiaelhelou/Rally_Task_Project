@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { DisplayredeemService, Gift, Point } from '../../services/displayredeems/displayredeem.service';
 import { RedeemgiftService } from '../../services/redeemgifts/redeemgift.service';
@@ -15,35 +15,55 @@ export class RedeemPage implements OnInit {
   points: Point[];
   status: any;
 
-  constructor(private router: Router, private service: DisplayredeemService, private service2: RedeemgiftService, public toastController: ToastController) { }
+  constructor(private router: Router, private service: DisplayredeemService, private service2: RedeemgiftService, public toastController: ToastController, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.service.getGift().subscribe ( response => {this.gifts = response;} )
-    this.service.getPoint().subscribe ( response => {this.points = response;} )
+   
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    this.service.getGift(id).subscribe ( response => {this.gifts = response;} )
+    this.service.getPoint(id).subscribe ( response => {this.points = response;} )
   }
 
   goToHome(){
-    this.router.navigate(['/home']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/home'],params);
   }
 
   goToUser(){
-    this.router.navigate(['/userprofile']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/userprofile'],params);
   }
 
   goToTask(){
-    this.router.navigate(['/task']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/task'],params);
   }
 
   goToLeadboard() {
-    this.router.navigate(['/leadboard']);
+    const id = this.route.snapshot.queryParamMap.get('userid');
+    const params : NavigationExtras= {
+      queryParams: {userid : id}
+    }
+       this.router.navigate(['/leadboard'],params);
   }
 
   getId(val){
-    this.service2.sendId(val).subscribe (response => {this.status = response;} )
-    if (this.status.status == true){
+    const id = this.route.snapshot.queryParamMap.get('userid');
+
+    this.service2.sendId(val, id).subscribe (response => {this.status = response;} )
+  
       this.presentToast();
-      this.router.navigate(['/redeem']);
-    }
+
+   
  
   }
 

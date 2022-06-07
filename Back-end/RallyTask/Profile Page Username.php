@@ -4,8 +4,7 @@ header('Access-Control-Allow-Origin: *');
 
 include('ConnecttoDb\my_db.php'); 
 
-session_start();
-$id = $_SESSION['ID'];
+$id = $_GET['user_id'];
 
 $query = $mysqli->prepare("SELECT user_username FROM users WHERE user_id = ?;");
 $query->bind_param('i',$id);

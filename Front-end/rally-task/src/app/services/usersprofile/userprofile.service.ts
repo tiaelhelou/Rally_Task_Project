@@ -22,15 +22,15 @@ export class UserprofileService{
 
   constructor(private http: HttpClient) { }
 
-  getCompletedTask() {
-    return this.http.get<[CompletedTask]>(this.url + "Profile Page CompletedTask.php");
+  getCompletedTask(user_id) {
+    return this.http.get<[CompletedTask]>(this.url + "Profile Page CompletedTask.php?user_id=" + user_id);
   }
 
   getUndergoingTask() {
     return this.http.get<[UndergoingTask]>(this.url + "Profile Page UndergoingTask.php");
   }
 
-  getUsername() {
-    return this.http.get<[Username]>(this.url + "Profile Page Username.php");
+  getUsername(user_id) {
+    return this.http.get<[Username]>(this.url + "Profile Page Username.php?user_id=" + user_id);
   }
 }
